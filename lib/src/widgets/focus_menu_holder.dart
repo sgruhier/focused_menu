@@ -34,6 +34,7 @@ class FocusedMenuHolder extends StatefulWidget {
   final Duration? duration;
   final double? blurSize;
   final Color? blurBackgroundColor;
+
   final double? bottomOffsetHeight;
   final double? menuOffset;
 
@@ -87,8 +88,7 @@ class _FocusedMenuHolderState extends State<FocusedMenuHolder> {
   }
 
   void _getOffset() {
-    RenderBox renderBox =
-        containerKey.currentContext!.findRenderObject() as RenderBox;
+    RenderBox renderBox = containerKey.currentContext!.findRenderObject() as RenderBox;
     Size size = renderBox.size;
     Offset offset = renderBox.localToGlobal(Offset.zero);
     setState(() {
